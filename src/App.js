@@ -1,9 +1,12 @@
 import React, { useState } from "react";
+import marked from "marked";
 function App() {
-    const [text, setText] = useState();
+    const [text, setText] = useState("");
+
     function handleChange(e) {
         setText(e.target.value);
     }
+
     return (
         <div className="App">
             <h1>Markdown Previewer</h1>
@@ -20,10 +23,10 @@ function App() {
                         value={text}
                     ></textarea>
                 </div>
-                <div className="preview">
-                    <h3>Preview</h3>
-                    <p>{text}</p>
-                </div>
+                <div
+                    className="preview"
+                    dangerouslySetInnerHTML={{ __html: marked(text) }}
+                ></div>
             </div>
         </div>
     );
