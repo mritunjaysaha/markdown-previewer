@@ -9,7 +9,44 @@ function App() {
 
     function header(e) {
         e.preventDefault();
-        setText(text + "### ");
+        setText(text + "\n\n### ");
+    }
+
+    function bold(e) {
+        e.preventDefault();
+        setText(text + "\n\n**enter text here**");
+    }
+
+    function italic(e) {
+        e.preventDefault();
+        setText(text + "\n\n_Enter text here_");
+    }
+    function quote(e) {
+        e.preventDefault();
+        setText(text + "\n\n> ");
+    }
+    function code(e) {
+        e.preventDefault();
+        setText(text + "\n\n`Enter code between this`");
+    }
+    function link(e) {
+        e.preventDefault();
+        setText(text + "\n\n[](url)");
+    }
+
+    function bulletedList(e) {
+        e.preventDefault();
+        setText(text + "\n\n- ");
+    }
+
+    function numberedList(e) {
+        e.preventDefault();
+        setText(text + "\n\n1. ");
+    }
+
+    function taskList(e) {
+        e.preventDefault();
+        setText(text + "\n\n- [ ] ");
     }
 
     return (
@@ -21,14 +58,18 @@ function App() {
                     <h3>Markdown text</h3>
                     <div className="component-panel">
                         <button onClick={header}>Header</button>
-                        <button>Bold</button>
-                        <button>Italic</button>
-                        <button>insert a quote</button>
-                        <button>insert code</button>
-                        <button>insert link</button>
-                        <button>Add a bulleted list</button>
-                        <button>Add a numbered list</button>
-                        <button>Add a task list</button>
+                        <button onClick={bold}>Bold</button>
+                        <button onClick={italic}>Italic</button>
+                        <button onClick={quote}>insert a quote</button>
+                        <button onClick={code}>insert code</button>
+                        <button onClick={link}>insert link</button>
+                        <button onClick={bulletedList}>
+                            Add a bulleted list
+                        </button>
+                        <button onClick={numberedList}>
+                            Add a numbered list
+                        </button>
+                        <button onClick={taskList}>Add a task list</button>
                     </div>
                     <textarea
                         cols="30"
