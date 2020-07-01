@@ -1,10 +1,34 @@
 import React, { useState } from "react";
 import marked from "marked";
-import TextField from "@material-ui/core/TextField";
+import "./styles/main.css";
+import FormatBoldIcon from "@material-ui/icons/FormatBold";
+import FormatItalicIcon from "@material-ui/icons/FormatItalic";
+import FormatQuoteIcon from "@material-ui/icons/FormatQuote";
+import CodeIcon from "@material-ui/icons/Code";
+import InsertLinkIcon from "@material-ui/icons/InsertLink";
+import FormatListBulletedIcon from "@material-ui/icons/FormatListBulleted";
+import FormatListNumberedIcon from "@material-ui/icons/FormatListNumbered";
+import CheckBoxOutlinedIcon from "@material-ui/icons/CheckBoxOutlined";
+import Paper from "@material-ui/core/Paper";
+import { makeStyles } from "@material-ui/core/styles";
+import Tabs from "@material-ui/core/Tabs";
+import Tab from "@material-ui/core/Tab";
+import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
+
+const useStyles = makeStyles({
+    root: {
+        flexGrow: 1,
+    },
+});
 
 function App() {
     const [text, setText] = useState("");
+    const classes = useStyles();
+    const [value, setValue] = useState(0);
 
+    const handleTabs = (event, newValue) => {
+        setValue(newValue);
+    };
     function handleChange(e) {
         setText(e.target.value);
     }
@@ -87,42 +111,86 @@ function App() {
         }
     }
 
-    return (
-        <div className="App">
-            <h1>Markdown Previewer</h1>
-
-            <div className="container-textarea">
-                <div className="input-textarea-container">
-                    <h3>Markdown text</h3>
-                    <div className="component-panel">
-                        <button onClick={header}>Header</button>
-                        <button onClick={bold}>Bold</button>
-                        <button onClick={italic}>Italic</button>
-                        <button onClick={quote}>insert a quote</button>
-                        <button onClick={code}>insert code</button>
-                        <button onClick={link}>insert link</button>
-                        <button onClick={bulletedList}>
-                            Add a bulleted list
-                        </button>
-                        <button onClick={numberedList}>
-                            Add a numbered list
-                        </button>
-                        <button onClick={taskList}>Add a task list</button>
-                    </div>
+    function TextArea() {
+        return (
+            <>
+                <div className="component-panel">
+                    <button onClick={header}>H</button>
+                    <button onClick={bold}>
+                        <FormatBoldIcon />
+                    </button>
+                    <button onClick={italic}>
+                        <FormatItalicIcon />
+                    </button>
+                    <button onClick={quote}>
+                        <FormatQuoteIcon />
+                    </button>
+                    <button onClick={code}>
+                        <CodeIcon />
+                    </button>
+                    <button onClick={link}>
+                        <InsertLinkIcon />
+                    </button>
+                    <button onClick={bulletedList}>
+                        <FormatListBulletedIcon />
+                    </button>
+                    <button onClick={numberedList}>
+                        <FormatListNumberedIcon />
+                    </button>
+                    <button onClick={taskList}>
+                        <CheckBoxOutlinedIcon />
+                    </button>
+                </div>
+                <div className="textarea-div">
                     <textarea
-                        cols="30"
+                        cols="40"
                         rows="10"
+                        max
                         className="input-textarea"
                         placeholder="Insert text"
                         onChange={handleChange}
                         value={text}
                     ></textarea>
                 </div>
-                <div
-                    className="preview"
-                    dangerouslySetInnerHTML={{ __html: marked(text) }}
-                ></div>
+            </>
+        );
+    }
+
+    function PreviewArea() {
+        return (
+            <div className="input-textarea-container">
+                <h3>Markdown text</h3>
+                <div className="container-textarea"></div>
+                <div>
+                    <h3>Preview</h3>
+                    <div
+                        className="preview"
+                        dangerouslySetInnerHTML={{ __html: marked(text) }}
+                    ></div>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing
+                        elit. Omnis debitis totam similique ipsum, praesentium
+                        expedita aperiam aliquam unde magnam quod.
+                    </p>
+                </div>
             </div>
+        );
+    }
+    return (
+        <div className="App">
+            <h1>Markdown Previewer</h1>
+            <BrowserRouter>
+                <Paper className={classes.root}>
+                    <Tabs value={value} onChange={handleTabs}>
+                        <Tab label="Write" componet={Link} to="/" />
+                        <Tab label="Preview" component={Link} to="/preview" />
+                    </Tabs>
+                </Paper>
+                <Switch>
+                    <Route exact path="/" component={TextArea} />
+                    <Route path="/preview" component={PreviewArea} />
+                </Switch>
+            </BrowserRouter>
         </div>
     );
 }
