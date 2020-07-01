@@ -21,7 +21,7 @@ body {
         width: 2em;
 
         &:hover {
-            color: #f00;
+            color: #0366d6;
         }
     }
     .header-font {
@@ -33,6 +33,7 @@ body {
     height: 66vh;
     width: 97.5%;
     resize: none;
+    border: 1px solid #ccc;
     border-radius: 5px;
     padding: 1em;
     font-size: 13px;
@@ -47,7 +48,7 @@ body {
     font-family: "Poppins", sans-serif;
 
     height: 70.5vh;
-    border: 1px solid #000;
+    border: 1px solid #ccc;
     border-radius: 5px;
     margin: 0;
     background-color: #fff;
@@ -62,8 +63,10 @@ body {
 .MuiTab-wrapper {
     color: #000;
 }
-.PrivateTabIndicator-root-2.PrivateTabIndicator-colorSecondary-4.MuiTabs-indicator {
-    //Set the selected tab indicator to black
+
+.PrivateTabIndicator-root-2.PrivateTabIndicator-colorSecondary-4.MuiTabs-indicator,
+.jss2.jss4.MuiTabs-indicator {
+    //set the color of the current tab indicator
     background-color: #000;
 }
 
