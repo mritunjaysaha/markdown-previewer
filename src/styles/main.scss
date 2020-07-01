@@ -78,3 +78,19 @@ body {
     // remove the shadow from tabs
     box-shadow: none;
 }
+
+@media screen and (max-width: 760px) {
+    body {
+        margin: 2%;
+    }
+    .format-bar {
+        position: relative;
+        top: 0;
+
+        left: 0;
+        padding: 0 0 1em 0;
+    }
+    .input-textarea {
+        width: 90%;
+    }
+}

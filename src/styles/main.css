@@ -75,4 +75,20 @@ body {
 .MuiPaper-root.MuiAppBar-root.MuiAppBar-positionStatic.MuiAppBar-colorPrimary.MuiPaper-elevation4 {
   box-shadow: none; }
 
+@media screen and (max-width: 760px) {
+  /* line 83, main.scss */
+  body {
+    margin: 2%; }
+
+  /* line 86, main.scss */
+  .format-bar {
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 0 0 1em 0; }
+
+  /* line 93, main.scss */
+  .input-textarea {
+    width: 90%; } }
+
 /*# sourceMappingURL=main.css.map */
