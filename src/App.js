@@ -10,7 +10,7 @@ import FormatListBulletedIcon from "@material-ui/icons/FormatListBulleted";
 import FormatListNumberedIcon from "@material-ui/icons/FormatListNumbered";
 import CheckBoxOutlinedIcon from "@material-ui/icons/CheckBoxOutlined";
 import SimpleTabs from "./tabs.component";
-
+import Tooltip from "@material-ui/core/Tooltip";
 function App() {
     const [text, setText] = useState("");
 
@@ -100,33 +100,51 @@ function App() {
         return (
             <>
                 <div className="format-bar">
-                    <button onClick={header} className="header-font">
-                        H
-                    </button>
-                    <button onClick={bold}>
-                        <FormatBoldIcon />
-                    </button>
-                    <button onClick={italic}>
-                        <FormatItalicIcon />
-                    </button>
-                    <button onClick={quote}>
-                        <FormatIndentIncreaseIcon />
-                    </button>
-                    <button onClick={code}>
-                        <CodeIcon />
-                    </button>
-                    <button onClick={link}>
-                        <InsertLinkIcon />
-                    </button>
-                    <button onClick={bulletedList}>
-                        <FormatListBulletedIcon />
-                    </button>
-                    <button onClick={numberedList}>
-                        <FormatListNumberedIcon />
-                    </button>
-                    <button onClick={taskList}>
-                        <CheckBoxOutlinedIcon />
-                    </button>
+                    <Tooltip title="Add header text" placement="top" arrow>
+                        <button onClick={header} className="header-font">
+                            H
+                        </button>
+                    </Tooltip>
+                    <Tooltip title="Add bold text" placement="top" arrow>
+                        <button onClick={bold}>
+                            <FormatBoldIcon />
+                        </button>
+                    </Tooltip>
+                    <Tooltip title="Add italic text" placement="top" arrow>
+                        <button onClick={italic}>
+                            <FormatItalicIcon />
+                        </button>
+                    </Tooltip>
+                    <Tooltip title="Insert a quote" placement="top" arrow>
+                        <button onClick={quote}>
+                            <FormatIndentIncreaseIcon />
+                        </button>
+                    </Tooltip>
+                    <Tooltip title="Insert code" placement="top" arrow>
+                        <button onClick={code}>
+                            <CodeIcon />
+                        </button>
+                    </Tooltip>
+                    <Tooltip title="Add a link" placement="top" arrow>
+                        <button onClick={link}>
+                            <InsertLinkIcon />
+                        </button>
+                    </Tooltip>
+                    <Tooltip title="Add a bulleted list" placement="top" arrow>
+                        <button onClick={bulletedList}>
+                            <FormatListBulletedIcon />
+                        </button>
+                    </Tooltip>
+                    <Tooltip title="Add a numbered list" placement="top" arrow>
+                        <button onClick={numberedList}>
+                            <FormatListNumberedIcon />
+                        </button>
+                    </Tooltip>
+                    <Tooltip title="Add a task list" placement="top" arrow>
+                        <button onClick={taskList}>
+                            <CheckBoxOutlinedIcon />
+                        </button>
+                    </Tooltip>
                 </div>
                 <div className="textarea-div">
                     <textarea
