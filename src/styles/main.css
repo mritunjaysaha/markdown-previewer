@@ -1,11 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-/* line 3, main.scss */
 body {
   margin: 0 10%;
   font-family: "Poppins", sans-serif;
   background-color: #ddd; }
 
-/* line 9, main.scss */
 .format-bar {
   position: absolute;
   top: 94px;
@@ -13,24 +11,20 @@ body {
   flex-direction: row;
   right: 10%;
   padding-right: 0.8em; }
-  /* line 16, main.scss */
   .format-bar button {
     background: none;
     border: none;
     height: 2.5em;
     font-size: 1.2em;
-    width: 2em; }
-    /* line 23, main.scss */
+    width: 2em; 
+  cursor: pointer;}
     .format-bar button:hover {
       color: #0366d6; }
-    /* line 26, main.scss */
     .format-bar button:focus {
       outline: none; }
-  /* line 30, main.scss */
   .format-bar .header-font {
     font-weight: bold; }
 
-/* line 34, main.scss */
 .input-textarea {
   font-family: "Poppins", sans-serif;
   height: 66vh;
@@ -40,13 +34,11 @@ body {
   border-radius: 5px;
   padding: 1em;
   font-size: 13px; }
-  /* line 43, main.scss */
   .input-textarea:focus {
     border: 1px solid #0366d6;
     box-shadow: 0px 2px 25px 0px #b3d1f3;
     outline: none; }
 
-/* line 50, main.scss */
 .preview {
   font-family: "Poppins", sans-serif;
   height: 70.5vh;
@@ -57,34 +49,27 @@ body {
   font-size: 13px;
   padding-left: 1em; }
 
-/* line 62, main.scss */
 .MuiTabs-flexContainer {
   background-color: #f6f8fa; }
 
-/* line 66, main.scss */
 .MuiTab-wrapper {
   color: #000; }
 
-/* line 70, main.scss */
 .PrivateTabIndicator-root-2.PrivateTabIndicator-colorSecondary-4.MuiTabs-indicator,
 .jss2.jss4.MuiTabs-indicator {
   background-color: #000; }
 
-/* line 76, main.scss */
 .MuiBox-root {
   background-color: #f6f8fa; }
 
-/* line 80, main.scss */
 .MuiPaper-root.MuiAppBar-root.MuiAppBar-positionStatic.MuiAppBar-colorPrimary.MuiPaper-elevation4 {
   box-shadow: none; }
 
-/* line 85, main.scss */
 code {
   background-color: #ddd;
   padding: 0.2em;
   border-radius: 15px; }
 
-/* line 90, main.scss */
 blockquote {
   border-left: 4px solid #6a737d;
   color: #6a737d;
@@ -92,18 +77,15 @@ blockquote {
   padding: 0 16px; }
 
 @media screen and (max-width: 760px) {
-  /* line 97, main.scss */
   body {
     margin: 2%; }
 
-  /* line 100, main.scss */
   .format-bar {
     position: relative;
     top: 0;
     left: 0;
     padding: 0 0 1em 0; }
 
-  /* line 107, main.scss */
   .input-textarea {
     width: 90%; } }
 
