@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import marked from "marked";
+import TextField from "@material-ui/core/TextField";
+
 function App() {
     const [text, setText] = useState("");
 
@@ -9,44 +11,80 @@ function App() {
 
     function header(e) {
         e.preventDefault();
-        setText(text + "\n\n### ");
+        if (text === "") {
+            setText(text + "### ");
+        } else {
+            setText(text + "\n\n### ");
+        }
     }
 
     function bold(e) {
         e.preventDefault();
-        setText(text + "\n\n**enter text here**");
+        if (text === "") {
+            setText(text + "**Enter text here** ");
+        } else {
+            setText(text + "\n\n**Enter text here** ");
+        }
     }
 
     function italic(e) {
         e.preventDefault();
-        setText(text + "\n\n_Enter text here_");
+        if (text === "") {
+            setText(text + "_Enter text here_ ");
+        } else {
+            setText(text + "\n\n_Enter text here_ ");
+        }
     }
     function quote(e) {
         e.preventDefault();
-        setText(text + "\n\n> ");
+        if (text === "") {
+            setText(text + "> ");
+        } else {
+            setText(text + "\n\n> ");
+        }
     }
     function code(e) {
         e.preventDefault();
-        setText(text + "\n\n`Enter code between this`");
+        if (text === "") {
+            setText(text + "`Enter text here` ");
+        } else {
+            setText(text + "\n\n`Enter text here` ");
+        }
     }
     function link(e) {
         e.preventDefault();
-        setText(text + "\n\n[](url)");
+        if (text === "") {
+            setText(text + "[](url) ");
+        } else {
+            setText(text + "\n\n[](url) ");
+        }
     }
 
     function bulletedList(e) {
         e.preventDefault();
-        setText(text + "\n\n- ");
+        if (text === "") {
+            setText(text + "-");
+        } else {
+            setText(text + "\n\n- ");
+        }
     }
 
     function numberedList(e) {
         e.preventDefault();
-        setText(text + "\n\n1. ");
+        if (text === "") {
+            setText(text + "1. ");
+        } else {
+            setText(text + "\n\n1. ");
+        }
     }
 
     function taskList(e) {
         e.preventDefault();
-        setText(text + "\n\n- [ ] ");
+        if (text === "") {
+            setText(text + "- [ ] ");
+        } else {
+            setText(text + "\n\n- [ ] ");
+        }
     }
 
     return (
