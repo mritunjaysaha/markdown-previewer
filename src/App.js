@@ -24,10 +24,10 @@ const useStyles = makeStyles({
 function App() {
     const [text, setText] = useState("");
     const classes = useStyles();
-    const [value, setValue] = useState(0);
+    const [currentTab, setCurrentTab] = useState(0);
 
     const handleTabs = (event, newValue) => {
-        setValue(newValue);
+        setCurrentTab(newValue);
     };
     function handleChange(e) {
         setText(e.target.value);
@@ -176,19 +176,22 @@ function App() {
             </div>
         );
     }
+    const pathMap = ["/", "/preview"];
     return (
         <div className="App">
             <h1>Markdown Previewer</h1>
             <BrowserRouter>
                 <Paper className={classes.root}>
-                    <Tabs value={value} onChange={handleTabs}>
-                        <Tab label="Write" componet={Link} to="/" />
-                        <Tab label="Preview" component={Link} to="/preview" />
+                    <Tabs value={currentTab} onChange={handleTabs}>
+                        {" "}
+                        {console.log(currentTab)}
+                        <Tab label="Write" component={Link} to={pathMap[0]} />
+                        <Tab label="Preview" component={Link} to={pathMap[1]} />
                     </Tabs>
                 </Paper>
                 <Switch>
-                    <Route exact path="/" component={TextArea} />
-                    <Route path="/preview" component={PreviewArea} />
+                    <Route exact path={pathMap[0]} component={TextArea} />
+                    <Route path={pathMap[1]} component={PreviewArea} />
                 </Switch>
             </BrowserRouter>
         </div>
