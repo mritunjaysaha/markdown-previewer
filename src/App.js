@@ -14,7 +14,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
-
+import SimpleTabs from "./tabs.component";
 const useStyles = makeStyles({
     root: {
         flexGrow: 1,
@@ -159,41 +159,25 @@ function App() {
     function PreviewArea() {
         return (
             <div className="input-textarea-container">
-                <h3>Markdown text</h3>
                 <div className="container-textarea"></div>
-                <div>
-                    <h3>Preview</h3>
-                    <div
-                        className="preview"
-                        dangerouslySetInnerHTML={{ __html: marked(text) }}
-                    ></div>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing
-                        elit. Omnis debitis totam similique ipsum, praesentium
-                        expedita aperiam aliquam unde magnam quod.
-                    </p>
-                </div>
+                <div
+                    className="preview"
+                    dangerouslySetInnerHTML={{ __html: marked(text) }}
+                ></div>
             </div>
         );
     }
-    const pathMap = ["/", "/preview"];
+
     return (
         <div className="App">
             <h1>Markdown Previewer</h1>
-            <BrowserRouter>
-                <Paper className={classes.root}>
-                    <Tabs value={currentTab} onChange={handleTabs}>
-                        {" "}
-                        {console.log(currentTab)}
-                        <Tab label="Write" component={Link} to={pathMap[0]} />
-                        <Tab label="Preview" component={Link} to={pathMap[1]} />
-                    </Tabs>
-                </Paper>
-                <Switch>
-                    <Route exact path={pathMap[0]} component={TextArea} />
-                    <Route path={pathMap[1]} component={PreviewArea} />
-                </Switch>
-            </BrowserRouter>
+
+            <SimpleTabs
+                write={TextArea}
+                tab1={"Write"}
+                preview={PreviewArea}
+                tab2={"Preview"}
+            />
         </div>
     );
 }
