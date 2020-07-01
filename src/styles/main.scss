@@ -1,11 +1,31 @@
 body {
     margin: 0 10%;
 }
-.textarea-div {
-    max-width: 50%;
-}
 
+.format-bar {
+    position: absolute;
+    top: 80px;
+    display: flex;
+    flex-direction: row;
+    right: 10%;
+    button {
+        background: none;
+        border: none;
+        height: 2.5em;
+        font-size: 1.2em;
+        width: 2em;
+
+        &:hover {
+            color: #f00;
+        }
+    }
+    .header-font {
+        font-weight: bold;
+    }
+}
 .input-textarea {
-    // resize: none;
-    max-width: 50%;
+    width: 100%;
+}
+.MuiBox-root.MuiBox-root-7 {
+    background-color: #aaa;
 }

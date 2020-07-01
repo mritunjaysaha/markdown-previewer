@@ -2,12 +2,33 @@
 body {
   margin: 0 10%; }
 
-/* line 4, main.scss */
-.textarea-div {
-  max-width: 50%; }
+/* line 5, main.scss */
+.format-bar {
+  position: absolute;
+  top: 80px;
+  display: flex;
+  flex-direction: row;
+  right: 10%; }
+  /* line 11, main.scss */
+  .format-bar button {
+    background: none;
+    border: none;
+    height: 2.5em;
+    font-size: 1.2em;
+    width: 2em; }
+    /* line 18, main.scss */
+    .format-bar button:hover {
+      color: #f00; }
+  /* line 22, main.scss */
+  .format-bar .header-font {
+    font-weight: bold; }
 
-/* line 8, main.scss */
+/* line 26, main.scss */
 .input-textarea {
-  max-width: 50%; }
+  width: 100%; }
+
+/* line 29, main.scss */
+.MuiBox-root.MuiBox-root-7 {
+  background-color: #aaa; }
 
 /*# sourceMappingURL=main.css.map */

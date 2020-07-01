@@ -9,26 +9,12 @@ import InsertLinkIcon from "@material-ui/icons/InsertLink";
 import FormatListBulletedIcon from "@material-ui/icons/FormatListBulleted";
 import FormatListNumberedIcon from "@material-ui/icons/FormatListNumbered";
 import CheckBoxOutlinedIcon from "@material-ui/icons/CheckBoxOutlined";
-import Paper from "@material-ui/core/Paper";
 import { makeStyles } from "@material-ui/core/styles";
-import Tabs from "@material-ui/core/Tabs";
-import Tab from "@material-ui/core/Tab";
-import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 import SimpleTabs from "./tabs.component";
-const useStyles = makeStyles({
-    root: {
-        flexGrow: 1,
-    },
-});
 
 function App() {
     const [text, setText] = useState("");
-    const classes = useStyles();
-    const [currentTab, setCurrentTab] = useState(0);
 
-    const handleTabs = (event, newValue) => {
-        setCurrentTab(newValue);
-    };
     function handleChange(e) {
         setText(e.target.value);
     }
@@ -114,8 +100,10 @@ function App() {
     function TextArea() {
         return (
             <>
-                <div className="component-panel">
-                    <button onClick={header}>H</button>
+                <div className="format-bar">
+                    <button onClick={header} className="header-font">
+                        H
+                    </button>
                     <button onClick={bold}>
                         <FormatBoldIcon />
                     </button>
@@ -143,9 +131,7 @@ function App() {
                 </div>
                 <div className="textarea-div">
                     <textarea
-                        cols="40"
                         rows="10"
-                        max
                         className="input-textarea"
                         placeholder="Insert text"
                         onChange={handleChange}
