@@ -71,7 +71,9 @@ export default function SimpleTabs(props) {
                     props.preview().props.dangerouslySetInnerHTML.__html === ""
                 )}
                 {props.preview().props.dangerouslySetInnerHTML.__html === "" ? (
-                    <div className="preview">Nothing to preview</div>
+                    <div className="preview">
+                        <p>Nothing to preview</p>
+                    </div>
                 ) : (
                     props.preview()
                 )}

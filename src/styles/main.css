@@ -2,9 +2,10 @@
 /* line 3, main.scss */
 body {
   margin: 0 10%;
-  font-family: "Poppins", sans-serif; }
+  font-family: "Poppins", sans-serif;
+  background-color: #ddd; }
 
-/* line 8, main.scss */
+/* line 9, main.scss */
 .format-bar {
   position: absolute;
   top: 94px;
@@ -12,58 +13,63 @@ body {
   flex-direction: row;
   right: 10%;
   padding-right: 0.8em; }
-  /* line 15, main.scss */
+  /* line 16, main.scss */
   .format-bar button {
     background: none;
     border: none;
     height: 2.5em;
     font-size: 1.2em;
     width: 2em; }
-    /* line 22, main.scss */
+    /* line 23, main.scss */
     .format-bar button:hover {
       color: #f00; }
-  /* line 26, main.scss */
+  /* line 27, main.scss */
   .format-bar .header-font {
     font-weight: bold; }
 
-/* line 30, main.scss */
+/* line 31, main.scss */
 .input-textarea {
-  width: 100%;
+  font-family: "Poppins", sans-serif;
+  height: 66vh;
+  width: 97.5%;
   resize: none;
   border-radius: 5px;
-  margin: 0 auto; }
-  /* line 35, main.scss */
+  padding: 1em;
+  font-size: 13px; }
+  /* line 39, main.scss */
   .input-textarea:focus {
     border: 1px solid #0366d6;
     box-shadow: 0px 2px 25px 0px #b3d1f3;
     outline: none; }
 
-/* line 42, main.scss */
+/* line 46, main.scss */
 .preview {
+  font-family: "Poppins", sans-serif;
   height: 70.5vh;
   border: 1px solid #000;
   border-radius: 5px;
-  padding: 0;
   margin: 0;
-  background-color: #fff; }
+  background-color: #fff;
+  font-size: 13px;
+  padding-left: 1em; }
 
-/* line 51, main.scss */
+/* line 58, main.scss */
 .MuiTabs-flexContainer {
   background-color: #f6f8fa; }
 
-/* line 55, main.scss */
+/* line 62, main.scss */
 .MuiTab-wrapper {
   color: #000; }
 
-/* line 58, main.scss */
+/* line 65, main.scss */
 .PrivateTabIndicator-root-2.PrivateTabIndicator-colorSecondary-4.MuiTabs-indicator {
   background-color: #000; }
 
-/* line 63, main.scss */
+/* line 70, main.scss */
 .MuiBox-root {
   background-color: #f6f8fa; }
 
-/* line 67, main.scss */
+/* line 74, main.scss */
 .MuiPaper-root.MuiAppBar-root.MuiAppBar-positionStatic.MuiAppBar-colorPrimary.MuiPaper-elevation4 {
   box-shadow: none; }
 
