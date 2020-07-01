@@ -9,7 +9,6 @@ import InsertLinkIcon from "@material-ui/icons/InsertLink";
 import FormatListBulletedIcon from "@material-ui/icons/FormatListBulleted";
 import FormatListNumberedIcon from "@material-ui/icons/FormatListNumbered";
 import CheckBoxOutlinedIcon from "@material-ui/icons/CheckBoxOutlined";
-import { makeStyles } from "@material-ui/core/styles";
 import SimpleTabs from "./tabs.component";
 
 function App() {
@@ -131,7 +130,7 @@ function App() {
                 </div>
                 <div className="textarea-div">
                     <textarea
-                        rows="10"
+                        rows="35"
                         className="input-textarea"
                         placeholder="Insert text"
                         onChange={handleChange}
@@ -144,13 +143,10 @@ function App() {
 
     function PreviewArea() {
         return (
-            <div className="input-textarea-container">
-                <div className="container-textarea"></div>
-                <div
-                    className="preview"
-                    dangerouslySetInnerHTML={{ __html: marked(text) }}
-                ></div>
-            </div>
+            <div
+                className="preview"
+                dangerouslySetInnerHTML={{ __html: marked(text) }}
+            ></div>
         );
     }
 

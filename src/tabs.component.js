@@ -67,7 +67,14 @@ export default function SimpleTabs(props) {
                 {props.write()}
             </TabPanel>
             <TabPanel value={value} index={1}>
-                {props.preview()}
+                {console.log(
+                    props.preview().props.dangerouslySetInnerHTML.__html === ""
+                )}
+                {props.preview().props.dangerouslySetInnerHTML.__html === "" ? (
+                    <div className="preview">Nothing to preview</div>
+                ) : (
+                    props.preview()
+                )}
             </TabPanel>
             <TabPanel value={value} index={2}>
                 Item Three

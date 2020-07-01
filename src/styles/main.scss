@@ -1,13 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
 body {
     margin: 0 10%;
+    font-family: "Poppins", sans-serif;
 }
 
 .format-bar {
     position: absolute;
-    top: 80px;
+    top: 94px;
     display: flex;
     flex-direction: row;
     right: 10%;
+    padding-right: 0.8em;
     button {
         background: none;
         border: none;
@@ -25,7 +29,42 @@ body {
 }
 .input-textarea {
     width: 100%;
+    resize: none;
+    border-radius: 5px;
+    margin: 0 auto;
+    &:focus {
+        border: 1px solid #0366d6;
+        box-shadow: 0px 2px 25px 0px rgba(179, 209, 243, 1);
+        outline: none;
+    }
 }
-.MuiBox-root.MuiBox-root-7 {
-    background-color: #aaa;
+
+.preview {
+    height: 70.5vh;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+}
+
+.MuiTabs-flexContainer {
+    //set the background color of the tab
+    background-color: #f6f8fa;
+}
+.MuiTab-wrapper {
+    color: #000;
+}
+.PrivateTabIndicator-root-2.PrivateTabIndicator-colorSecondary-4.MuiTabs-indicator {
+    //Set the selected tab indicator to black
+    background-color: #000;
+}
+
+.MuiBox-root {
+    //set the background color of TabPanel
+    background-color: #f6f8fa;
+}
+.MuiPaper-root.MuiAppBar-root.MuiAppBar-positionStatic.MuiAppBar-colorPrimary.MuiPaper-elevation4 {
+    // remove the shadow from tabs
+    box-shadow: none;
 }
