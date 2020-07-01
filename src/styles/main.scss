@@ -23,6 +23,9 @@ body {
         &:hover {
             color: #0366d6;
         }
+        &:focus {
+            outline: none;
+        }
     }
     .header-font {
         font-weight: bold;
@@ -79,6 +82,17 @@ body {
     box-shadow: none;
 }
 
+code {
+    background-color: #ddd;
+    padding: 0.2em;
+    border-radius: 15px;
+}
+blockquote {
+    border-left: 4px solid #6a737d;
+    color: #6a737d;
+    margin-bottom: 16px;
+    padding: 0 16px;
+}
 @media screen and (max-width: 760px) {
     body {
         margin: 2%;

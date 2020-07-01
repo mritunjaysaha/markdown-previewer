@@ -23,11 +23,14 @@ body {
     /* line 23, main.scss */
     .format-bar button:hover {
       color: #0366d6; }
-  /* line 27, main.scss */
+    /* line 26, main.scss */
+    .format-bar button:focus {
+      outline: none; }
+  /* line 30, main.scss */
   .format-bar .header-font {
     font-weight: bold; }
 
-/* line 31, main.scss */
+/* line 34, main.scss */
 .input-textarea {
   font-family: "Poppins", sans-serif;
   height: 66vh;
@@ -37,13 +40,13 @@ body {
   border-radius: 5px;
   padding: 1em;
   font-size: 13px; }
-  /* line 40, main.scss */
+  /* line 43, main.scss */
   .input-textarea:focus {
     border: 1px solid #0366d6;
     box-shadow: 0px 2px 25px 0px #b3d1f3;
     outline: none; }
 
-/* line 47, main.scss */
+/* line 50, main.scss */
 .preview {
   font-family: "Poppins", sans-serif;
   height: 70.5vh;
@@ -54,40 +57,53 @@ body {
   font-size: 13px;
   padding-left: 1em; }
 
-/* line 59, main.scss */
+/* line 62, main.scss */
 .MuiTabs-flexContainer {
   background-color: #f6f8fa; }
 
-/* line 63, main.scss */
+/* line 66, main.scss */
 .MuiTab-wrapper {
   color: #000; }
 
-/* line 67, main.scss */
+/* line 70, main.scss */
 .PrivateTabIndicator-root-2.PrivateTabIndicator-colorSecondary-4.MuiTabs-indicator,
 .jss2.jss4.MuiTabs-indicator {
   background-color: #000; }
 
-/* line 73, main.scss */
+/* line 76, main.scss */
 .MuiBox-root {
   background-color: #f6f8fa; }
 
-/* line 77, main.scss */
+/* line 80, main.scss */
 .MuiPaper-root.MuiAppBar-root.MuiAppBar-positionStatic.MuiAppBar-colorPrimary.MuiPaper-elevation4 {
   box-shadow: none; }
 
+/* line 85, main.scss */
+code {
+  background-color: #ddd;
+  padding: 0.2em;
+  border-radius: 15px; }
+
+/* line 90, main.scss */
+blockquote {
+  border-left: 4px solid #6a737d;
+  color: #6a737d;
+  margin-bottom: 16px;
+  padding: 0 16px; }
+
 @media screen and (max-width: 760px) {
-  /* line 83, main.scss */
+  /* line 97, main.scss */
   body {
     margin: 2%; }
 
-  /* line 86, main.scss */
+  /* line 100, main.scss */
   .format-bar {
     position: relative;
     top: 0;
     left: 0;
     padding: 0 0 1em 0; }
 
-  /* line 93, main.scss */
+  /* line 107, main.scss */
   .input-textarea {
     width: 90%; } }
 

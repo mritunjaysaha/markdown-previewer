@@ -3,7 +3,7 @@ import marked from "marked";
 import "./styles/main.css";
 import FormatBoldIcon from "@material-ui/icons/FormatBold";
 import FormatItalicIcon from "@material-ui/icons/FormatItalic";
-import FormatQuoteIcon from "@material-ui/icons/FormatQuote";
+import FormatIndentIncreaseIcon from "@material-ui/icons/FormatIndentIncrease";
 import CodeIcon from "@material-ui/icons/Code";
 import InsertLinkIcon from "@material-ui/icons/InsertLink";
 import FormatListBulletedIcon from "@material-ui/icons/FormatListBulleted";
@@ -110,7 +110,7 @@ function App() {
                         <FormatItalicIcon />
                     </button>
                     <button onClick={quote}>
-                        <FormatQuoteIcon />
+                        <FormatIndentIncreaseIcon />
                     </button>
                     <button onClick={code}>
                         <CodeIcon />
