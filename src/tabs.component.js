@@ -78,9 +78,6 @@ export default function SimpleTabs(props) {
                     props.preview()
                 )}
             </TabPanel>
-            <TabPanel value={value} index={2}>
-                Item Three
-            </TabPanel>
         </div>
     );
 }
