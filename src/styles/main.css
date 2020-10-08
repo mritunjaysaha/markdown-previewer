@@ -1,112 +1,121 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 body {
-    margin: 0 10%;
-    font-family: "Poppins", sans-serif;
-    background-color: #ddd;
+  margin: 0 10%;
+  font-family: "Poppins", sans-serif;
+  background-color: #ddd;
 }
 
 .format-bar {
-    position: absolute;
-    top: 94px;
-    display: flex;
-    flex-direction: row;
-    right: 10%;
-    padding-right: 0.8em;
+  position: absolute;
+  top: 94px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  right: 10%;
+  padding-right: 0.8em;
 }
+
 .format-bar button {
-    background: none;
-    border: none;
-    height: 2.5em;
-    font-size: 1.2em;
-    width: 2em;
-    cursor: pointer;
+  background: none;
+  border: none;
+  height: 2.5em;
+  font-size: 1.2em;
+  width: 2em;
 }
+
 .format-bar button:hover {
-    color: #0366d6;
+  color: #0366d6;
 }
+
 .format-bar button:focus {
-    outline: none;
+  outline: none;
 }
+
 .format-bar .header-font {
-    font-weight: bold;
+  font-weight: bold;
+  padding-bottom: 0.2em;
 }
 
 .input-textarea {
-    font-family: "Poppins", sans-serif;
-    height: 66vh;
-    width: 97.5%;
-    resize: none;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 1em;
-    font-size: 13px;
+  font-family: "Poppins", sans-serif;
+  height: 66vh;
+  width: 97.5%;
+  resize: none;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 1em;
+  font-size: 13px;
 }
+
 .input-textarea:focus {
-    border: 1px solid #0366d6;
-    box-shadow: 0px 2px 25px 0px #b3d1f3;
-    outline: none;
+  border: 1px solid #0366d6;
+  -webkit-box-shadow: 0px 2px 25px 0px #b3d1f3;
+          box-shadow: 0px 2px 25px 0px #b3d1f3;
+  outline: none;
 }
 
 .preview {
-    font-family: "Poppins", sans-serif;
-    height: 70.5vh;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin: 0;
-    background-color: #fff;
-    font-size: 13px;
-    padding-left: 1em;
+  font-family: "Poppins", sans-serif;
+  height: 70.5vh;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 0;
+  background-color: #fff;
+  font-size: 13px;
+  padding-left: 1em;
 }
 
 .MuiTabs-flexContainer {
-    background-color: #f6f8fa;
+  background-color: #f6f8fa;
 }
 
 .MuiTab-wrapper {
-    color: #000;
+  color: #000;
 }
 
 .PrivateTabIndicator-root-2.PrivateTabIndicator-colorSecondary-4.MuiTabs-indicator,
 .jss2.jss4.MuiTabs-indicator {
-    background-color: #000;
+  background-color: #000;
 }
 
 .MuiBox-root {
-    background-color: #f6f8fa;
+  background-color: #f6f8fa;
 }
 
 .MuiPaper-root.MuiAppBar-root.MuiAppBar-positionStatic.MuiAppBar-colorPrimary.MuiPaper-elevation4 {
-    box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 code {
-    background-color: #ddd;
-    padding: 0.2em;
-    border-radius: 15px;
+  background-color: #ddd;
+  padding: 0.2em;
+  border-radius: 15px;
 }
 
 blockquote {
-    border-left: 4px solid #6a737d;
-    color: #6a737d;
-    margin-bottom: 16px;
-    padding: 0 16px;
+  border-left: 4px solid #6a737d;
+  color: #6a737d;
+  margin-bottom: 16px;
+  padding: 0 16px;
 }
 
 @media screen and (max-width: 760px) {
-    body {
-        margin: 2%;
-    }
-
-    .format-bar {
-        position: relative;
-        top: 0;
-        left: 0;
-        padding: 0 0 1em 0;
-    }
-
-    .input-textarea {
-        width: 90%;
-    }
+  body {
+    margin: 2%;
+  }
+  .format-bar {
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 0 0 1em 0;
+  }
+  .input-textarea {
+    width: 90%;
+  }
 }
-
 /*# sourceMappingURL=main.css.map */
